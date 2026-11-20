@@ -1,0 +1,112 @@
+{
+  "project": "PulseIQ Executive Analytics Platform",
+  "task": "Task 18 - Self-Service Metric Explorer & Privacy Engine",
+  "version": "1.1.0-explorer",
+  "environment": "production",
+  "data_cut_off_date": "2026-09-30 23:59:59 UTC",
+  "earliest_operating_month": "2025-04",
+  "latest_operating_month": "2026-09",
+  "total_operating_months": 18,
+  "data_checksum_sha256": "8ac1813866fab39e",
+  "exported_at": "2026-11-17T07:40:08.872133+00:00",
+  "live_db_size_kb": 160.0,
+  "parquet_manifest": {
+    "scorecard_monthly": {
+      "file": "scorecard_monthly.parquet",
+      "rows": 18,
+      "columns": 31,
+      "size_kb": 11.23,
+      "grain": "monthly_rollup"
+    },
+    "payroll_budget_variance": {
+      "file": "payroll_budget_variance.parquet",
+      "rows": 198,
+      "columns": 16,
+      "size_kb": 14.76,
+      "grain": "department_month"
+    },
+    "profit_and_loss_monthly": {
+      "file": "profit_and_loss_monthly.parquet",
+      "rows": 18,
+      "columns": 11,
+      "size_kb": 4.76,
+      "grain": "monthly_rollup"
+    },
+    "receivables_ageing_summary": {
+      "file": "receivables_ageing_summary.parquet",
+      "rows": 4,
+      "columns": 5,
+      "size_kb": 1.89,
+      "grain": "portfolio_bucket"
+    },
+    "department_workforce_dynamics": {
+      "file": "department_workforce_dynamics.parquet",
+      "rows": 198,
+      "columns": 22,
+      "size_kb": 19.02,
+      "grain": "department_month"
+    },
+    "team_performance_monthly": {
+      "file": "team_performance_monthly.parquet",
+      "rows": 288,
+      "columns": 14,
+      "size_kb": 13.99,
+      "grain": "team_month"
+    },
+    "dim_department": {
+      "file": "dim_department.parquet",
+      "rows": 11,
+      "columns": 5,
+      "size_kb": 2.25,
+      "grain": "dimension"
+    },
+    "dim_team": {
+      "file": "dim_team.parquet",
+      "rows": 16,
+      "columns": 7,
+      "size_kb": 2.8,
+      "grain": "dimension"
+    },
+    "cash_flow_monthly": {
+      "file": "cash_flow_monthly.parquet",
+      "rows": 18,
+      "columns": 6,
+      "size_kb": 2.89,
+      "grain": "monthly_rollup"
+    },
+    "metric_dictionary": {
+      "file": "metric_dictionary.parquet",
+      "rows": 28,
+      "columns": 12,
+      "size_kb": 8.01,
+      "grain": "catalog_definition"
+    },
+    "kpi_targets": {
+      "file": "kpi_targets.parquet",
+      "rows": 180,
+      "columns": 6,
+      "size_kb": 2.33,
+      "grain": "target_threshold"
+    },
+    "demo_users": {
+      "file": "demo_users.parquet",
+      "rows": 5,
+      "columns": 13,
+      "size_kb": 9.96,
+      "grain": "user_rbac"
+    }
+  },
+  "privacy_governance": {
+    "pii_redacted": true,
+    "individual_employee_records_excluded": 1606,
+    "raw_payroll_transactions_excluded": 7344,
+    "data_minimization_compliance": "GDPR / DPDP Article 25 (Privacy by Design & Default)",
+    "minimum_group_size_thresholds": {
+      "headcount_default": 5,
+      "attrition_and_risk": 10,
+      "compensation": 5,
+      "tasks_delivery": 5
+    },
+    "secondary_suppression_enforced": true
+  }
+}

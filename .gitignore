@@ -1,0 +1,46 @@
+# ==============================================================================
+# PulseIQ Task 17 - Git Exclusion Rules (Strict Zero-Secret & Privacy Policy)
+# ==============================================================================
+
+# 1. Platform & Local Secrets (NEVER COMMIT)
+.streamlit/secrets.toml
+.streamlit/secrets.toml.local
+*.secret
+*.env
+*.env.*
+*.key
+*.pem
+credentials.json
+token.json
+
+# 2. Raw Transaction Databases & Staging (Privacy by Design)
+# Keep only governed pulseiq_live_dw.db and parquet aggregates
+data/raw/
+*staging*.db
+*temp*.db
+
+# 3. Python Caches & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# 4. OS & IDE metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# 5. Local logs and transient exports
+*.log
+local_test_output/
+localtunnel.log
+screenshots/
